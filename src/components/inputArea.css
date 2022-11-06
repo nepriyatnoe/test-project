@@ -1,0 +1,55 @@
+.field-box {
+    display: inline-block;
+    width: 600px;
+    min-height: 400px;
+    box-sizing: border-box;
+    box-shadow: 2px 5px 25px 5px rgba(180, 180, 180, 0.5);
+    border-radius: 15px;
+    margin: 30px
+}
+
+
+
+.text-heading {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 5px 9px 0px rgb(252 255 3 / 50%);
+   
+}
+    span{
+    align-items: center;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 25pt;
+    font-weight: semi-bold; 
+ }
+
+.space {
+    height: 70px;
+    border-top: rgba(130, 127, 127, 0.5) solid 1px;
+}
+
+.editable {
+    display: inline-block;
+    height: 230px;
+    width: 100%;
+    max-width: 590px;
+    font-size:16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    margin: 5px;
+
+}
+
+.wrapper{
+    margin: 20px;
+    display: inline-block;
+}
+p{
+    max-width: 600px;
+}
+
+.text-area{
+    padding: 10px;
+}

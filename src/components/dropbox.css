@@ -1,0 +1,31 @@
+.input-box {
+    display: flex;
+    place-items: center;
+    margin-right: 50%;
+    margin-left: 50%;
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+    box-shadow: 2px 5px 25px 5px rgba(180, 180, 180, 0.5); 
+    border-radius: 10px;
+    margin: 20px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+  
+  .image-upload-button{
+    margin-left: AUTO;
+    margin-right: AUTO;
+  
+  }
+  
+  .input-image {
+    position: absolute; 
+    max-height: 400px;
+    max-width: 400px;
+  }
+
