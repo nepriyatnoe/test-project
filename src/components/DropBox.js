@@ -32,7 +32,7 @@ function UploadBox() {
 
   useEffect(() => {
     const data = window.localStorage.getItem('MY_VISIBILITY_STATE');
-    if (data !== 'hidden') setFiles(JSON.parse(data));
+    if (data !== 'hidden') changeVisibility(JSON.parse(data));
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
