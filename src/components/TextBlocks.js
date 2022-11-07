@@ -26,6 +26,8 @@ function TextBlocks() {
     useEffect(() => {
         const data = window.localStorage.getItem('MY_APP_STATE');
         if (data !== firstText) setFirstText(JSON.parse(data));
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -40,6 +42,8 @@ function TextBlocks() {
     useEffect(() => {
         const data = window.localStorage.getItem('MY_SECOND_STATE');
         if (data !== secondText) setSecondText(JSON.parse(data));
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
