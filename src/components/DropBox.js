@@ -30,7 +30,16 @@ function UploadBox() {
     setVisibility({ visibility: 'hidden' });
   };
 
+  useEffect(() => {
+    const data = window.localStorage.getItem('MY_VISIBILITY_STATE');
+    if (data !== 'hidden') setFiles(JSON.parse(data));
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('MY_VISIBILITY_STATE', JSON.stringify(visibility));
+  }, [visibility]);
 
   function onDropAccepted(acceptedFiles) {
     setFiles(acceptedFiles)
