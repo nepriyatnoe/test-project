@@ -9,6 +9,17 @@ function UploadBox() {
 
   const [visibility, setVisibility] = useState({ visibility: 'visible' });
 
+  useEffect(() => {
+    const data = window.localStorage.getItem('MY_VISIBILITY_STATE');
+    if (data !== 'hidden') changeVisibility(JSON.parse(data));
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('MY_VISIBILITY_STATE', JSON.stringify(visibility));
+  }, [visibility]);
+
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/*",
     onDrop: (acceptedFiles) => {
@@ -30,16 +41,7 @@ function UploadBox() {
     setVisibility({ visibility: 'hidden' });
   };
 
-  useEffect(() => {
-    const data = window.localStorage.getItem('MY_VISIBILITY_STATE');
-    if (data !== 'hidden') changeVisibility(JSON.parse(data));
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    window.localStorage.setItem('MY_VISIBILITY_STATE', JSON.stringify(visibility));
-  }, [visibility]);
+ 
 
   function onDropAccepted(acceptedFiles) {
     setFiles(acceptedFiles)
