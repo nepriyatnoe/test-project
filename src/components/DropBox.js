@@ -74,7 +74,7 @@ function UploadBox() {
         </div>
         <div className="image-upload-button" style={visibility}>
           <div {...getRootProps()} onDrop={onDropAccepted}>
-            <input {...getInputProps()} />
+            <input {...getInputProps()} type='file' />
             <img src="https://img.icons8.com/pastel-glyph/64/null/upload--v1.png" className="upload-png" alt="upload" />
             <p>PNG, JPEG files only</p>
           </div>
