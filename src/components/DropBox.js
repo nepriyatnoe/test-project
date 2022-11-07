@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { useEffect } from "react";
 import { useDropzone } from "react-dropzone"
 import "./dropbox.css"
 
@@ -38,13 +39,26 @@ function UploadBox() {
 
   ))
 
+  function onDropAccepted(acceptedFiles) {
+    setFiles(acceptedFiles)
+  }
+
+  useEffect(() => {
+    const data = window.localStorage.getItem('MY_IMAGE_STATE');
+    if (data !== files) setFiles(JSON.parse(data));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('MY_IMAGE_STATE', JSON.stringify(files));
+  }, [files]);
+
 
   return (
     <div className="container">
       <div className="input-box">
         <div className="input-image">{images}</div>
         <div className="image-upload-button" style={visibility}>
-          <div {...getRootProps()}>
+          <div {...getRootProps()} onDrop={onDropAccepted}>
             <input {...getInputProps()} />
             <img src="https://img.icons8.com/pastel-glyph/64/null/upload--v1.png" className="upload-png" alt="upload image" />
             <p>PNG, JPEG files only</p>

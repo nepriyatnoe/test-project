@@ -1,8 +1,8 @@
 import React from "react"
 import "./App.css"
 import UploadBox from "./components/DropBox"
-import MyForm2 from "./components/inputArea1"
-import MyForm1 from "./components/inputArea2"
+import TextBlocks from "./components/TextBlocks"
+
 
 
 function App() {
@@ -12,10 +12,7 @@ function App() {
     <div className="App">
       <div className="main-wrapper">
         <UploadBox />
-        <div className="text-blocks">
-          <MyForm1 />
-          <MyForm2 />
-        </div>
+        <TextBlocks />
       </div>
     </div>
 
